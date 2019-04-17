@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:id="@+id/top_ll"
+        android:focusableInTouchMode="true">
+
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:layout_weight="8"
+            android:iconifiedByDefault="false"
+            android:queryHint="请输入搜索内容" />
+
+        <LinearLayout
+            android:id="@+id/ll_menu"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_marginLeft="8px"
+                android:src="@mipmap/icon_workmore" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5px"
+                android:text="@string/btn_name_channel" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="80px"
+            android:layout_margin="30px"
+            android:layout_marginRight="15px"
+            android:layout_weight="1"
+            android:src="@mipmap/icon_boss_fill" />
+
+    </LinearLayout>
+
+    <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner"
+
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+</android.support.constraint.ConstraintLayout>
